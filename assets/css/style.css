@@ -4,20 +4,16 @@
 
 body {
     background: url('../images/vertical-waves.png') repeat;
-    font-size: 18px;
-    line-height: 34px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #777777;
 }
 
 .site {
     display: flex;
     min-height: 100vh;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .site-content {
-    flex: 1;    
+    flex: 1;
 }
 
 .container {
@@ -35,7 +31,7 @@ p {
 }
 
 p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 100px;
 }
 
 h1,
@@ -46,16 +42,11 @@ h3 {
     color: #4aaaa5;
 }
 
-h1 {
-    font-size: 30px;
-    line-height: 49px;
-    border-bottom: 3px solid #dddddd;
-    padding-bottom: 20px;
-}
-
-h2,
-h3 {
-    font-size: 22px;
+p {
+    font-size: 16px;
+    line-height: 27px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
 }
 
 /*header*/
@@ -78,101 +69,36 @@ h3 {
     float: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    line-height: 90px;
+    line-height: 65px;
     color: #ffffff;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
-}
-
-nav {
-    float: right;
-    margin-top: 25px;
-}
-
-nav a {
-    color: #999999;
-    text-decoration: none;
-    margin-left: 15px;
-    display: inline-block;
-    border-left: 1px solid #efefef;
-    padding-left: 15px;
-    line-height: 18px;
-}
-
-nav a:first-child {
-    border-left: 0 none;
-}
-
-nav a:hover {
-    color: #4aaaa5;
-    text-decoration: none;
-    margin-left: 15px;
-    display: inline-block;
-    border-left: 1px solid #efefef;
-    padding-left: 15px;
-    line-height: 18px;
 }
 
 /*main*/
 
 #main-container {
     padding-top: 130px;
+    margin-bottom: 50px;    
 }
 
-.main-section {
-    background: #ffffff;
-    padding: 30px;
-    margin: 0 0 40px 0;
-    width: 100%;
-    max-width: 650px;
-    float: left;
-    border: 1px solid #dddddd;
-}
-
-.auth-image {
-    width: 200px;
-    height: auto;
-    margin-top: 10px;
-    float: left;
-    margin-right: 25px;
+.row {
+    margin-bottom: 100px;    
 }
 
 /*sidebar*/
 
-.sidebar {
-    background: #ffffff;
-    padding: 30px;
-    width: 100%;
-    max-width: 270px;
-    float: right;
-    border: 1px solid #dddddd;
-    margin-bottom: 20px;
-}
 
-h3,
-.sidebar,
-h2 {
-    border-bottom: 2px solid #eeeeee;
-    padding-bottom: 20px;
-    margin-bottom: 15px;
+#sidebar
+ {
     line-height: 22px;
-}
-
-.social {
-    width: 62px;
-    height: 62px;
-    margin-top: 8px;
-    margin-right: 5px;
-}
-
-.social:last-child {
-    margin-right: 0;
+    color: #4aaaa5;
 }
 
 /*footer*/
 
-footer {
+.footer {
     background: #666666;
     color: #ffffff;
     padding: 30px 0;
@@ -186,10 +112,9 @@ footer {
 /*portfolio*/
 
 .work {
-    width: 274px;
+    width: 250px;
     overflow: auto;
     position: relative;
-    float: left;
     margin: 20px 0 25px;
 }
 
@@ -265,4 +190,82 @@ input[type=submit]:hover {
     font-size: 18px;
     padding: 10px 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+    /*header*/
+    .container {
+        max-width: 780px;
+    }
+    /*main*/
+    .main-section {
+        max-width: 450px;
+    }
+    /*portfolio*/
+    .work {
+        margin: 20px 0 25px 55px;
+    }
+    /*contact*/
+}
+
+@media screen and (max-width: 768px) {
+    /*header*/
+    .container {
+        max-width: 650px;
+    }
+    /*main*/
+    .main-section {
+        max-width: 650px;
+    }
+    /*sidebar*/
+    .sidebar {
+        max-width: 650px;
+        float: left;
+    }
+    /*portfolio*/
+    .work {
+        margin: 20px 0 25px;
+    }
+    /*contact*/
+}
+
+@media screen and (max-width: 640px) {
+    /*header*/
+    #logo {
+        width: 100%;
+    }
+    nav {
+        float: left;
+    }
+    nav a:first-child {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    nav a:nth-child(2) {
+        padding-left: 100px;
+        padding-right: 75px;
+    }
+    nav a:last-child {
+        padding-left: 100px;
+    }
+    .container {
+        max-width: 640px;
+    }
+    /*main*/
+    .main-section {
+        max-width: 500px;
+        margin-top: 40px;
+        margin-left: 60px;
+    }
+    /*sidebar*/
+    .sidebar {
+        max-width: 500px;
+        float: left;
+        margin-left: 60px;
+    }
+    /*portfolio*/
+    .work {
+        margin: 20px 0 25px 80px;
+    }
+    /*contact*/
 }
