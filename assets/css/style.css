@@ -113,6 +113,7 @@ p {
 
 .work {
     width: 250px;
+    height: 200px;   
     overflow: auto;
     position: relative;
     margin: 20px 0 25px;
